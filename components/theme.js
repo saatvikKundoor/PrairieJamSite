@@ -7,51 +7,40 @@ export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
 
 export const fontSizes = [14, 16, 20, 24, 32, 48, 64, 96, 128]
 
+
 export const palette = {
-  darker: '#121217',
-  dark: '#17171d',
-  darkless: '#252429',
-  // greyscale
-  black: '#1f2d3d',
-  steel: '#273444',
-  slate: '#3c4858',
-  muted: '#8492a6',
-  smoke: '#e0e6ed',
-  snow: '#f9fafc',
+  // Base Backgrounds (Warm Dark Theme Foundations)
+  darker: '#11100d',
+  dark: '#1a1814',
+  darkless: '#26231e',
+
+  // Recalibrated Warm Greyscale
+  black: '#1c1a17',
+  steel: '#38342e',
+  slate: '#5c564c',
+  muted: '#8c8375',
+  smoke: '#e6e2da',
+  snow: '#faf8f5',
   white: '#ffffff',
-  // brand
-  primary: '#ffb400',
-  primaryWash: '#ffdc89',
-  /*
-  alt: '#007a87',
-  altWash: '#bfe6ea',
-  altWashLight: '#dffbfd',
-  altLight: '#009aab',
-  altDark: '#004f58',
-  accent: '#ff5a5f',
-  accentLight: '#ff7e82',
-  accentWash: '#ffd4d5',
-  accentDark: '#e00007',
-  success: '#3fb34f',
-  error: '#b23f42',
-  cool: '#00bdde',
-  coolWash: '#7cecff'
-  */
-  alt: '#13cfbf',
-  altDark: '#05386b',
-  altLight: '#6ed5fa',
-  altWash: '#379683',
-  altWashLight: '#9cf0df',
-  accent: '#5cdb95',
-  accentWash: '#befad9',
-  accentLight: '#8ee4af',
-  accentDark: '#189975',
-  success: '#3fb34f',
-  error: '#b23f42',
-  cool: '#00bdde',
-  coolWash: '#7cecff',
-  lemonade: '#ff5a5f'
+
+  // Brand Palette (Cream & Gold Premium Aesthetic)
+  primary: '#D6BB87',          // Muted Gold / Primary Accent
+  primaryWash: '#FFFDD0',      // Soft Cream / Primary Surface
+  primaryDark: '#A88F5C',      // Deep Gold for text readability/hover states
+  
+  // Secondary / Supporting (Deep Espresso/Navy for sophisticated contrast)
+  alt: '#2C3E50',
+  altDark: '#1A252F',
+  altLight: '#34495E',
+  altWash: '#EAECEE',
+
+  // Functional / Semantic Colors (Adjusted for warmth)
+  success: '#4A7c59',          // Sage-leaning Success Green
+  error: '#C94A4A',            // Terracotta-leaning Error Red
+  warning: '#DE9E36',          // Warm Amber Warning
+  info: '#4A7BB0'              // Muted Slate Blue Info
 }
+
 
 const theme = merge(base, {
   breakpoints,
