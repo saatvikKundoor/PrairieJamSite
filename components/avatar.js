@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Image, Link as A } from 'rebass'
+import { Image, Link as A } from '@theme-ui/components'
 
 export default ({ size = 50, light = false, ...props }) => (
   <Link href="https://angelhacks.org">

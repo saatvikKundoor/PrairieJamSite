@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Box } from 'rebass'
+import { Box } from '@theme-ui/components'
 import { Container } from './blocks'
 import { useColorMode } from 'theme-ui'
 import theme from './theme'

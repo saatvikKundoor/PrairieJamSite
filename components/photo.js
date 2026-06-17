@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Box, Text, Image } from 'rebass'
+import { Box, Text, Image } from '@theme-ui/components'
 import { useColorMode } from 'theme-ui'
 import theme from './theme'
 

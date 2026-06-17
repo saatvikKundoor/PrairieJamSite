@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Link as A } from 'rebass'
+import { Box, Flex, Text, Link as A } from '@theme-ui/components'
 import { useColorMode } from 'theme-ui'
 import Link from 'next/link'
 import Icon from './icon'
