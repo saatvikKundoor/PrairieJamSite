@@ -1,5 +1,5 @@
-import base from '@rebass/preset'
 import { merge } from 'lodash'
+const base = {}
 
 export const breakpoints = [32, 48, 64].map(w => `${w}em`)
 
