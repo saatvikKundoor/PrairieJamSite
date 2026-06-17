@@ -49,8 +49,8 @@ const theme = merge(base, {
   initialColorMode: 'light',
   colors: {
     ...palette,
-    text: palette.black,
-    background: palette.snow,
+    text: palette.black,         // E.g., a deep charcoal/sepia instead of pure black
+    background: palette.snow,    // E.g., warm cream or soft parchment
     cards: palette.white,
     muted: palette.muted,
     sunken: palette.smoke,
@@ -73,25 +73,25 @@ const theme = merge(base, {
     }
   },
   fonts: {
-    body:
-      'Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
-    heading: 'inherit',
-    mono: 'Menlo, monospace'
+    // Elegant, readable serifs for that bookish feel
+    body: 'Georgia, Cambria, "Times New Roman", Times, serif',
+    heading: '"Playfair Display", "Lora", Georgia, serif',
+    mono: 'Menlo, Monaco, Consolas, "Liberation Mono", monospace'
   },
   lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-    tight: 0.875
+    body: 1.6,       // Slightly wider line height for comfortable, book-like reading
+    heading: 1.25,
+    tight: 1.1
   },
   fontWeights: {
     body: '400',
-    medium: '700',
-    mediumbold: '800',
-    bold: '900'
+    medium: '600',
+    mediumbold: '700',
+    bold: '800'
   },
   letterSpacings: {
-    heading: '-0.05em',
-    caps: '0.05em'
+    heading: '-0.02em', // Less aggressive negative spacing fits serifs better
+    caps: '0.08em'      // Slightly wider tracking for capitalized labels
   },
   sizes: {
     superslim: 512,
@@ -101,18 +101,19 @@ const theme = merge(base, {
     wide: 1536
   },
   radii: {
-    default: 6,
-    extra: 9,
+    default: 4,      // Slightly sharper, traditional book-binding corners
+    extra: 8,
     circle: 99999
   },
   shadows: {
-    card: '0 4px 8px rgba(0, 0, 0, 0.125)',
-    sheet: '0 8px 32px rgba(0, 0, 0, 0.0625)'
+    // Softer, more organic shadows to mimic natural light on paper
+    card: '0 2px 12px rgba(45, 38, 32, 0.08)', 
+    sheet: '0 8px 24px rgba(45, 38, 32, 0.05)'
   },
   text: {
     heading: {
       fontFamily: 'heading',
-      fontWeight: 'heading',
+      fontWeight: 'bold',
       lineHeight: 'heading'
     }
   },
@@ -125,14 +126,16 @@ const theme = merge(base, {
     },
     heading: {
       fontFamily: 'heading',
-      fontWeight: 'heading',
+      fontWeight: 'bold',
       lineHeight: 'heading'
     },
     card: {
       bg: 'cards',
       p: [3, 4],
       borderRadius: 'extra',
-      boxShadow: 'card'
+      boxShadow: 'card',
+      border: '1px solid',
+      borderColor: 'muted' // Optional: adds a subtle page-like border
     },
     sheet: {
       bg: 'cards',
@@ -151,20 +154,30 @@ const theme = merge(base, {
     a: {
       color: 'primary',
       cursor: 'pointer',
+      textDecoration: 'underline', // Classic editorial look
+      textDecorationThickness: '1px',
+      textUnderlineOffset: '3px',
+      transition: 'color .15s ease-in-out',
       ':hover, :focus': {
-        color: 'alt'
+        color: 'alt',
+        textDecorationColor: 'currentColor'
       }
     },
     p: {
-      fontFamily: 'mono'
+      fontFamily: 'body', // Changed from 'mono' to 'body' for proper reading layout
+      fontSize: [2, 3],   // Slightly larger body text works beautifully with serifs
+      lineHeight: 'body',
+      mb: 3
     },
     img: {
       maxWidth: '100%',
-      height: 'auto'
+      height: 'auto',
+      borderRadius: 'default' // Images look nice with a slight paper-edge radius
     },
     navitem: {
       cursor: 'pointer',
-      borderRadius: 'circle',
+      borderRadius: 'default',
+      fontFamily: 'heading', // Use heading font for a literary navigation style
       fontWeight: 'medium',
       fontSize: 2,
       lineHeight: 'body',
@@ -172,9 +185,10 @@ const theme = merge(base, {
       py: 1,
       px: [2, 3],
       mx: [null, 1],
-      transition: 'background .125s ease-in-out',
+      transition: 'all .125s ease-in-out',
       ':focus, :hover, :active': {
-        bg: 'sunken'
+        bg: 'sunken',
+        color: 'primary'
       }
     }
   }
